@@ -9,7 +9,7 @@ include 'koneksi.php'
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SarPras</title>
-    <link rel="stylesheet" href="datasiswa.css">
+    <link rel="stylesheet" href="databarang.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,32 +32,28 @@ include 'koneksi.php'
     <!-- TAMPILAN UTAMA END -->
 
     <div class="content">
-        <h4>DATA SISWA</h4>
+        <h4>DATA BARANG</h4>
         <table cellspacing="0" border="1">
             <tr>
-                <th>NISN</th>
-                <th>Nama Siswa</th>
-                <th>Kelas</th>
-                <th>Nomer Hp</th>
-                <th>Jenis Kelamin</th>
-                <th>Alamat</th>
+                <th>Id Barang</th>
+                <th>Nama Barang</th>
+                <th>Kondisi</th>
+                <th>Jumlah barang</th>
                 <th>Action</th>
             </tr>
             <?php
-                $sql = "SELECT * FROM ds";
+                $sql = "SELECT * FROM db";
                 $query = mysqli_query ($connect,$sql);
                 while($data= mysqli_fetch_array ($query)){
                     echo"
                     <tr>
-                        <td>$data[NISN]</td>
-                        <td>$data[Nama_siswa]</td>
-                        <td>$data[Kelas]</td>
-                        <td>$data[Nomer_Hp]</td>
-                        <td>$data[Jenis_kelamin]</td>
-                        <td>$data[Alamat]</td>
+                        <td>$data[Id_Barang]</td>
+                        <td>$data[Nama_Barang]</td>
+                        <td>$data[Kondisi]</td>
+                        <td>$data[Jumlah_barang]</td>
                         <td>
-                            <a href='formedit.php?NISN=".$data['NISN']."'>Edit</a>
-                            <a href='hapus.php?NISN=".$data['NISN']."'>Hapus</a>
+                            <a href='formedit.php?NISN=".$data['Id_Barang']."'>Edit</a>
+                            <a href='hapus.php?NISN=".$data['Id_Barang']."'>Hapus</a>
                         </td>
                     </tr>
                     ";
@@ -68,7 +64,6 @@ include 'koneksi.php'
             <a href="createds.html"><p>Create</p></a>
         </div>
     </div>
-
 
 </body>
 </html>

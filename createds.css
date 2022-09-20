@@ -1,8 +1,8 @@
 body{
-    display: flex;
     margin: 0;
     padding: 0; 
     background: linear-gradient(117.15deg, rgba(234, 96, 96, 0.5) 0%, #7117EA 100.48%);
+    display: flex;
 }
 
 .sidebar{
@@ -23,9 +23,6 @@ body{
     height: 89px;
     margin-left: 50px;
     margin-top: 3px;
-}
-.sidebar .logo a{
-    text-decoration: none;
 }
 .sidebar .logo p{
     width: 243px;
@@ -64,46 +61,35 @@ body{
 .sidebar .data-barang a:hover{
     color: black;
 }
-/* CSS TAMPILAN UTAMA */
 
-.content h4{
-    height: 30px;
+form{
     margin-left: 60px;
-    margin-top: 170px;
+    margin-top: 80px;
 }
-.content table{
-    box-sizing: border-box;
-    background: #a24db7;
-    margin-left: 60px;
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6{
     width: 900px;
+    border: 1px solid white;
+    background-color: transparent;
 }
-
-.content table th{
-    text-align: center;
-    padding: 1rem;
-    font-family: 'Roboto';
-    font-weight: 500;
-}
-.content table td{
-    background-color: white;
-    text-align: center;
-}
-.content table td a{
-    text-decoration: none;
-    color: #0191ff;
-}
-
-.create p{
+.d7{
     font-size: 25px;
     width: 100px;
     height: 30px;
     background: #852f9bcc;
     margin-top: 50px;
-    margin-left: 860px;
+    margin-left: 800px;
     text-align: center;
     border-radius: 6px;
-}
-.create a{
-    text-decoration: none;
+    border: 1px solid white;
     color: white;
+    cursor: pointer;
+}
+.d7:hover{
+    background-color: black;
 }
