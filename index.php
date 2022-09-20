@@ -16,7 +16,7 @@ include 'koneksi.php'
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-
+    <!-- Sidebar Start -->
     <div class="sidebar">
         <div class="logo">
             <img src="tb.png" alt="">
@@ -28,8 +28,8 @@ include 'koneksi.php'
         <div class="data-barang">
             <a href="databarang.php"><i class="fa-solid fa-box"></i> Data Barang</a>
         </div>
-        
     </div>
+    <!-- Sidebar End -->
 
 
 </body>

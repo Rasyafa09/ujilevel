@@ -31,13 +31,40 @@ include 'koneksi.php'
     </div>
     <!-- TAMPILAN UTAMA END -->
 
-    <h2>DATA SISWA</h2>
-    <form>
-    <p>Id Siswa</p>
-    <label><input type="text"></label>
-    <p>Nama Siswa</p>
-    <label><input type="text" name="" id=""></label>
-    </form>
+    <div class="content">
+        <h4>DATA SISWA</h4>
+        <table cellspacing="0" border="1">
+            <tr>
+                <th>NISN</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>Nomer Hp</th>
+                <th>Jenis Kelamin</th>
+                <th>Alamat</th>
+                <th>Action</th>
+            </tr>
+            <?php
+                $sql = "SELECT * FROM ds";
+                $query = mysqli_query ($connect,$sql);
+                while($data= mysqli_fetch_array ($query)){
+                    echo"
+                    <tr>
+                        <td>$data[NISN]</td>
+                        <td>$data[Nama_siswa]</td>
+                        <td>$data[Kelas]</td>
+                        <td>$data[Nomer_Hp]</td>
+                        <td>$data[Jenis_kelamin]</td>
+                        <td>$data[Alamat]</td>
+                        <td>
+                            <a href='formedit.php?NISN=".$data['NISN']."'>Edit</a>
+                            <a href='hapus.php?NISN=".$data['NISN']."'>Hapus</a>
+                        </td>
+                    </tr>
+                    ";
+                    }
+            ?>
+        </table>
+    </div>
 
 </body>
 </html>

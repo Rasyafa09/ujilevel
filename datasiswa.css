@@ -66,23 +66,29 @@ body{
 }
 /* CSS TAMPILAN UTAMA */
 
-h2{
-    margin-left: 100px;
-    margin-top: 100px;
-    font-family: 'Readex Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    color: #000000;
+.content h4{
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 170px;
+}
+.content table{
+    box-sizing: border-box;
+    background: #a24db7;
+    margin-left: 60px;
+    width: 900px;
 }
 
-p{
-    margin-top: 278px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 40px;
-    color: #FFFFFF;
+.content table th{
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.content table td{
+    background-color: white;
+    text-align: center;
+}
+.content table td a{
+    text-decoration: none;
+    color: #0191ff;
 }
